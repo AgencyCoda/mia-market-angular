@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@agencycoda/mia-market-core": [
+        "dist/agencycoda/mia-market-core/agencycoda-mia-market-core",
+        "dist/agencycoda/mia-market-core"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
