@@ -1,8 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { MiaProductStock } from '../entities/mia_product_stock';
-import { MiaBaseCrudHttpService } from '@agencycoda/mia-core';
+import { MiaBaseCrudHttpService, MiaCoreConfig, MIA_CORE_PROVIDER } from '@agencycoda/mia-core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +9,11 @@ import { environment } from 'src/environments/environment';
 export class MiaProductStockService extends MiaBaseCrudHttpService<MiaProductStock> {
 
   constructor(
+    @Inject(MIA_CORE_PROVIDER) protected config: MiaCoreConfig,
     protected http: HttpClient
   ) {
     super(http);
-    this.basePathUrl = environment.baseUrl + 'mia_product_stock';
+    this.basePathUrl = config.baseUrl + 'mia_product_stock';
   }
  
 }
