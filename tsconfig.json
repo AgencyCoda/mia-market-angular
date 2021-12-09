@@ -6,6 +6,10 @@
       "@agencycoda/mia-market-core": [
         "dist/agencycoda/mia-market-core/agencycoda-mia-market-core",
         "dist/agencycoda/mia-market-core"
+      ],
+      "@agencycoda/mia-market-panel": [
+        "dist/agencycoda/mia-market-panel/agencycoda-mia-market-panel",
+        "dist/agencycoda/mia-market-panel"
       ]
     },
     "baseUrl": "./",
